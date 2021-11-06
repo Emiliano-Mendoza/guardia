@@ -25,16 +25,16 @@ public class PersonalREST {
     private PersonalService personalServ;
 	
 	@GetMapping
-    public ResponseEntity<List<Personal>> AllPersonal(@PathVariable Integer id){
+    public ResponseEntity<List<Personal>> AllPersonal(){
     	return ResponseEntity.ok(personalServ.getAllPersonal());
     }
     
     @PostMapping
     public ResponseEntity<Personal> crearPersonal(@RequestBody Personal nuevo){
     	
-    	Personal temp = personalServ.crearPersonal(nuevo);
-    	
         try {
+        	Personal temp = personalServ.crearPersonal(nuevo);
+        	
           	return ResponseEntity.created(new URI("/api/personal" + temp.getNroLegajo())).body(temp);
           }catch(Exception e) {
           	return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
