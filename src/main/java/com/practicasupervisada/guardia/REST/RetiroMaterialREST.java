@@ -43,7 +43,7 @@ public class RetiroMaterialREST {
 
         	RetiroMaterial temp = retiroServ.crearRetiroMaterial(nuevo);
         	
-          	return ResponseEntity.created(new URI("/api/personal" + temp.getIdRetiro())).body(temp);
+          	return ResponseEntity.created(new URI("/api/retiro_material" + temp.getIdRetiro())).body(temp);
           }catch(Exception e) {
           	return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
           }    	
