@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.practicasupervisada.guardia.dominio.Asistencia;
 import com.practicasupervisada.guardia.service.AsistenciaService;
-import com.practicasupervisada.guardia.service.PersonalService;
 
 @RestController
 @RequestMapping("/api/asistencia")

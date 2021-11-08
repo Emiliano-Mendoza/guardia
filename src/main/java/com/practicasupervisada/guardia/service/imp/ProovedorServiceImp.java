@@ -17,12 +17,12 @@ public class ProovedorServiceImp implements ProveedorService {
 	private ProveedorRepo proveedorRepo;
 	
 	@Override
-	public Proveedor crearPersonal(Proveedor p) {
+	public Proveedor crearProveedor(Proveedor p) {
 		return proveedorRepo.save(p);
 	}
 
 	@Override
-	public List<Proveedor> getAllProveedores() {
+	public List<Proveedor> getAllProveedor() {
 		return proveedorRepo.findAll();
 	}
 

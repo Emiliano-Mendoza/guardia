@@ -15,10 +15,6 @@ public class Proveedor{
 	private int idProveedor;
 	private String razonSocial;
 	
-	public Proveedor(String razonSocial) {
-		super();
-		this.razonSocial = razonSocial;
-	}
 	
 	public int getIdProveedor() {
 		return idProveedor;

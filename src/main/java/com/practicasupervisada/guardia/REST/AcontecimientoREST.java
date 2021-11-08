@@ -1,6 +1,7 @@
 package com.practicasupervisada.guardia.REST;
 
 import java.net.URI;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,28 +15,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.practicasupervisada.guardia.dominio.Proveedor;
-import com.practicasupervisada.guardia.service.ProveedorService;
+import com.practicasupervisada.guardia.dominio.Acontecimiento;
+import com.practicasupervisada.guardia.service.AcontecimientoService;
 
 @RestController
-@RequestMapping("/api/proveedor")
-public class ProveedorREST {
+@RequestMapping("/api/acontecimiento")
+public class AcontecimientoREST {
 	
 	@Autowired
-    private ProveedorService proveedorServ;
+    private AcontecimientoService aconServ;
 	
 	@GetMapping
-    public ResponseEntity<List<Proveedor>> AllProveedor(){
-    	return ResponseEntity.ok(proveedorServ.getAllProveedor());
+    public ResponseEntity<List<Acontecimiento>> AllAcontecimiento(){
+    	return ResponseEntity.ok(aconServ.getAllAcontecimientos());
     }
-    
+	
     @PostMapping
-    public ResponseEntity<Proveedor> crearProveedor(@RequestBody Proveedor nuevo){
+    public ResponseEntity<Acontecimiento> crearAcontecimiento(@RequestBody Acontecimiento nuevo){
     	
         try {
-        	Proveedor temp = proveedorServ.crearProveedor(nuevo);
+        	nuevo.setFecha(new Date());
         	
-          	return ResponseEntity.created(new URI("/api/proveedor" + temp.getIdProveedor())).body(temp);
+        	Acontecimiento temp = aconServ.crearAcontecimiento(nuevo);
+        	
+          	return ResponseEntity.created(new URI("/api/acontecimiento" + temp.getIdAcontencimiento())).body(temp);
           }catch(Exception e) {
           	return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
           }
@@ -43,9 +46,9 @@ public class ProveedorREST {
     }
     
     @DeleteMapping(path = "/id/{id}")
-    public ResponseEntity<Proveedor> borrarProveedor(@PathVariable Integer id){
+    public ResponseEntity<Acontecimiento> borrarAcontecimiento(@PathVariable Integer id){
     	
-    	proveedorServ.eliminarProveedor(id);
+    	aconServ.eliminarAcontecimiento(id);
     	
         return ResponseEntity.ok().build();
     }

@@ -7,8 +7,8 @@ import com.practicasupervisada.guardia.dominio.Proveedor;
 
 public interface ProveedorService {
 	
-	public Proveedor crearPersonal(Proveedor p);
-	public List<Proveedor> getAllProveedores();
+	public Proveedor crearProveedor(Proveedor p);
+	public List<Proveedor> getAllProveedor();
 	public void eliminarProveedor(int idProveedor);
 	public Optional<Proveedor> findById(int idProveedor);
 	

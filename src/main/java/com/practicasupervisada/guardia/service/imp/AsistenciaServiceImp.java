@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.practicasupervisada.guardia.dao.AsistenciaRepo;
 import com.practicasupervisada.guardia.dominio.Asistencia;
-import com.practicasupervisada.guardia.dominio.Personal;
-import com.practicasupervisada.guardia.dominio.Proveedor;
 import com.practicasupervisada.guardia.service.AsistenciaService;
 
 @Service
