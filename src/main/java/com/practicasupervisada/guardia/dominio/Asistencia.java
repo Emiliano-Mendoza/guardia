@@ -24,7 +24,7 @@ public class Asistencia {
 	
 	@ManyToOne
 	@JoinColumn(name = "ID_Usuario")
-	private UsuarioGuardia usuario;
+	private Usuario usuario;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_Personal")
@@ -39,10 +39,10 @@ public class Asistencia {
 	private Vehiculo vehiculo;
 	
 	
-	public UsuarioGuardia getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
-	public void setUsuario(UsuarioGuardia usuario) {
+	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
 	

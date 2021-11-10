@@ -25,7 +25,7 @@ public class Acontecimiento {
 	
 	@ManyToOne
 	@JoinColumn(name = "ID_UsuarioGuardia")
-	private UsuarioGuardia usuario;
+	private Usuario usuario;
 	
 	public Acontecimiento(Date fecha, String ronda, String descripcion) {
 		super();
@@ -57,10 +57,10 @@ public class Acontecimiento {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public UsuarioGuardia getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
-	public void setUsuario(UsuarioGuardia usuario) {
+	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
 	

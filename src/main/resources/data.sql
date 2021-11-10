@@ -66,3 +66,5 @@ INSERT INTO public.personal VALUES(959,'VAZQUEZ','MAXIMILIANO EMANUEL','Enfardad
 INSERT INTO public.personal VALUES(44,'VEGA','HUGO ROBERTO','Pegadora');
 INSERT INTO public.personal VALUES(1,'VERCELLI','RUBEN CARLOS','Impresión');
 
+INSERT INTO public.usuario(id_usuario, "contraseña", enabled, rol, usuario) VALUES (1, '1234', true, 'GUARDIA', 'emi123');
+INSERT INTO public.usuario(id_usuario, "contraseña", enabled, rol, usuario) VALUES (2, '5678', true, 'SECTOR', 'mariano123');

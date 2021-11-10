@@ -24,24 +24,24 @@ public class RetiroMaterial {
 	
 	@ManyToOne
 	@JoinColumn(name = "ID_UsuarioGuardia")
-	private UsuarioGuardia usuarioGuardia;
+	private Usuario usuarioGuardia;
 	@ManyToOne
 	@JoinColumn(name = "ID_UsuarioSector")
-	private UsuarioResponsableSector usuarioResponsableSector;
+	private Usuario usuarioResponsableSector;
 	@ManyToOne
 	@JoinColumn(name = "ID_Personal")
 	private Personal personal;
 	
-	public UsuarioGuardia getUsuarioGuardia() {
+	public Usuario getUsuarioGuardia() {
 		return usuarioGuardia;
 	}
-	public void setUsuarioGuardia(UsuarioGuardia usuarioGuardia) {
+	public void setUsuarioGuardia(Usuario usuarioGuardia) {
 		this.usuarioGuardia = usuarioGuardia;
 	}
-	public UsuarioResponsableSector getUsuarioSector() {
+	public Usuario getUsuarioSector() {
 		return usuarioResponsableSector;
 	}
-	public void setUsuarioSector(UsuarioResponsableSector usuarioResponsableSector) {
+	public void setUsuarioSector(Usuario usuarioResponsableSector) {
 		this.usuarioResponsableSector = usuarioResponsableSector;
 	}
 	public Personal getPersonal() {

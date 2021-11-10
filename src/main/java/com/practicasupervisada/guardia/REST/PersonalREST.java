@@ -2,6 +2,7 @@ package com.practicasupervisada.guardia.REST;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,6 +28,11 @@ public class PersonalREST {
 	@GetMapping
     public ResponseEntity<List<Personal>> AllPersonal(){
     	return ResponseEntity.ok(personalServ.getAllPersonal());
+    }
+	
+	@GetMapping(path = "/id/{id}")
+    public ResponseEntity<Optional<Personal>> PersonalPorId(@PathVariable Integer id){
+    	return ResponseEntity.ok(personalServ.findById(id));
     }
     
     @PostMapping

@@ -1,4 +1,4 @@
-package com.practicasupervisada.guardia.service.imp;
+package com.practicasupervisada.guardia.service.impl;
 
 import java.util.List;
 import java.util.Optional;

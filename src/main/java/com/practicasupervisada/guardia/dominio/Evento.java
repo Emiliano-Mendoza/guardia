@@ -24,11 +24,11 @@ public class Evento {
 	
 	@ManyToOne
 	@JoinColumn(name = "ID_UsuarioSector")
-	private UsuarioResponsableSector usuarioResponsableSector;
+	private Usuario usuarioResponsableSector;
 	
 	@ManyToOne
 	@JoinColumn(name = "ID_UsuarioGuardia")
-	private UsuarioGuardia usurioGuardia;
+	private Usuario usurioGuardia;
 	
 	public int getIdEvento() {
 		return idEvento;
@@ -60,16 +60,16 @@ public class Evento {
 	public void setOcurrencia(Boolean ocurrencia) {
 		this.ocurrencia = ocurrencia;
 	}
-	public UsuarioResponsableSector getUsuarioSector() {
+	public Usuario getUsuarioSector() {
 		return usuarioResponsableSector;
 	}
-	public void setUsuarioSector(UsuarioResponsableSector usuarioResponsableSector) {
+	public void setUsuarioSector(Usuario usuarioResponsableSector) {
 		this.usuarioResponsableSector = usuarioResponsableSector;
 	}
-	public UsuarioGuardia getUsurioGuardia() {
+	public Usuario getUsurioGuardia() {
 		return usurioGuardia;
 	}
-	public void setUsurioGuardia(UsuarioGuardia usurioGuardia) {
+	public void setUsurioGuardia(Usuario usurioGuardia) {
 		this.usurioGuardia = usurioGuardia;
 	}
 	
